@@ -1,5 +1,8 @@
 # Angular Dashboard Application
 
+- **Deployed Application:** [https://diceus-nu.vercel.app/dashboard]
+- **GitHub Repository:** [https://github.com/MOlexiy/diceus]
+
 ### Technologies Used
 
 - **Angular 19** – component-based architecture
