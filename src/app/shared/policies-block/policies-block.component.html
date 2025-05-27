@@ -1,0 +1,46 @@
+<div class="mt-10" *ngIf="policies">
+  <h2 class="text-2xl font-semibold mb-4 text-white">Policies</h2>
+  <div class="flex flex-wrap gap-4 bg-slate-800 p-4 rounded-2xl shadow-inner">
+    <div
+      *ngFor="let policy of policies.rows"
+      class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900 min-w-[220px] flex-1 text-white"
+    >
+      <div class="text-2xl" [ngSwitch]="policy.line">
+        <span
+          *ngSwitchCase="'Marine Cargo'"
+          class="material-icons text-blue-400"
+          >directions_boat</span
+        >
+        <span
+          *ngSwitchCase="'General Liability'"
+          class="material-icons text-green-400"
+          >verified_user</span
+        >
+        <span
+          *ngSwitchCase="'Workers Comp'"
+          class="material-icons text-purple-400"
+          >shield</span
+        >
+        <span *ngSwitchCase="'Property'" class="material-icons text-yellow-400"
+          >description</span
+        >
+        <span *ngSwitchCase="'Umbrella'" class="material-icons text-red-400"
+          >umbrella</span
+        >
+        <span *ngSwitchDefault class="material-icons">help</span>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <div class="text-lg font-semibold">{{ policy.line }}</div>
+        <div class="text-sm text-slate-400">
+          Premium:
+          {{ policy.renewalPremium | currency: "USD" : "symbol" : "1.0-0" }}
+        </div>
+        <div class="text-sm text-slate-400">
+          Eff. Date: {{ policy.effectiveDate || "---" }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

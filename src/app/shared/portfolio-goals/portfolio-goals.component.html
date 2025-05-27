@@ -1,0 +1,71 @@
+<div class="bg-slate-800 rounded-2xl p-4 text-white w-full h-full">
+  <h2 class="text-xl font-semibold mb-4">Portfolio Goals</h2>
+
+  <!-- Portfolio Loss Ratio -->
+  <div class="mb-6">
+    <p class="text-xs font-medium text-gray-400">PORTFOLIO LOSS RATIO TARGET</p>
+    <p class="text-[10px] text-gray-400 mb-1">TG:{{ portfolioGoals.lossRatio.target }}%</p>
+    <div class="relative h-6 rounded-full overflow-hidden bg-red-700">
+      <div
+        class="absolute left-0 top-0 h-full bg-green-500"
+        [style.width.%]="portfolioGoals.lossRatio.value"
+      ></div>
+      <div class="absolute inset-0 flex justify-center items-center text-xs font-semibold">
+        {{ portfolioGoals.lossRatio.value }}%
+      </div>
+    </div>
+    <p class="text-xs mt-1 text-green-500">{{ portfolioGoals.lossRatio.statusText }}</p>
+  </div>
+
+  <!-- Renewal Retention -->
+  <div class="mb-6">
+    <p class="text-xs font-medium text-gray-400">RENEWAL RETENTION</p>
+    <p class="text-[10px] text-gray-400 mb-1">TG:{{ portfolioGoals.renewalRetention.targetRange }}</p>
+    <div class="relative h-6 rounded-full overflow-hidden bg-red-700">
+      <div
+        class="absolute left-0 top-0 h-full bg-yellow-300"
+        [style.width.%]="portfolioGoals.renewalRetention.value"
+      ></div>
+      <div class="absolute inset-0 flex justify-center items-center text-xs font-semibold">
+        {{ portfolioGoals.renewalRetention.value }}%
+      </div>
+    </div>
+    <p class="text-xs mt-1 text-green-500">{{ portfolioGoals.renewalRetention.statusText }}</p>
+  </div>
+
+  <!-- New Business Target -->
+  <div class="mb-4">
+    <p class="text-xs text-gray-400">NEW BUSINESS TARGET</p>
+    <div class="relative h-6 rounded-full bg-slate-600 overflow-hidden">
+      <div
+        class="absolute top-0 left-0 h-full bg-blue-400"
+        [style.width.%]="portfolioGoals.newBusiness.percent"
+      ></div>
+      <div class="absolute left-2 top-1 text-xs font-semibold text-white">
+        ${{ portfolioGoals.newBusiness.value }}{{ portfolioGoals.newBusiness.currency }}
+      </div>
+      <div class="absolute right-2 top-1 text-xs font-semibold text-white">
+        ${{ portfolioGoals.newBusiness.target }}{{ portfolioGoals.newBusiness.currency }}
+      </div>
+    </div>
+    <p class="text-[10px] mt-1 text-gray-400">{{ portfolioGoals.newBusiness.percent }}%</p>
+  </div>
+
+  <!-- Annual GWP Target -->
+  <div>
+    <p class="text-xs text-gray-400">ANNUAL GWP TARGET</p>
+    <div class="relative h-6 rounded-full bg-slate-600 overflow-hidden">
+      <div
+        class="absolute top-0 left-0 h-full bg-blue-400"
+        [style.width.%]="portfolioGoals.annualGWP.percent"
+      ></div>
+      <div class="absolute left-2 top-1 text-xs font-semibold text-white">
+        ${{ portfolioGoals.annualGWP.value }}{{ portfolioGoals.annualGWP.currency }}
+      </div>
+      <div class="absolute right-2 top-1 text-xs font-semibold text-white">
+        ${{ portfolioGoals.annualGWP.target }}{{ portfolioGoals.annualGWP.currency }}
+      </div>
+    </div>
+    <p class="text-[10px] mt-1 text-gray-400">{{ portfolioGoals.annualGWP.percent }}%</p>
+  </div>
+</div>

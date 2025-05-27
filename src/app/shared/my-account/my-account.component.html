@@ -1,0 +1,125 @@
+<div class="rounded-xl bg-slate-800 p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl font-semibold text-white">My accounts</h2>
+    <div class="flex gap-2">
+      <input
+        type="text"
+        placeholder="Search"
+        class="bg-[#1E293B] px-3 py-1.5 rounded-md text-sm text-white"
+      />
+      <button class="px-4 py-1 text-sm rounded-md bg-[#1E293B] text-white">
+        Filter
+      </button>
+      <button class="px-4 py-1 text-sm rounded-md bg-[#1E293B] text-white">
+        Sort
+      </button>
+      <button class="px-4 py-1 text-sm rounded-md bg-[#1E293B] text-white">
+        Group
+      </button>
+      <button class="px-4 py-1 text-sm rounded-md bg-blue-600 text-white">
+        + New
+      </button>
+    </div>
+  </div>
+
+  <div class="overflow-auto">
+    <table class="w-full text-left text-sm text-white">
+      <thead>
+        <tr class="text-gray-400 border-b border-gray-700">
+          <th class="py-2">ACCOUNT NAME/TYPE</th>
+          <th class="py-2">LINE</th>
+          <th class="py-2">BROKER</th>
+          <th class="py-2">RENEWAL DATE</th>
+          <th class="py-2">PREMIUM</th>
+          <th class="py-2">RATED PREMIUM</th>
+          <th class="py-2">LOSS RATIO</th>
+          <th class="py-2">APPETITE</th>
+          <th class="py-2">STATUS</th>
+          <th class="py-2">TRIAGE</th>
+          <th class="py-2">WINNABILITY</th>
+          <th class="py-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let account of accountData"
+          class="border-b border-gray-800"
+        >
+          <td class="py-3">
+            <div class="font-medium text-white">{{ account.name }}</div>
+            <div class="text-gray-400 text-xs">{{ account.type }}</div>
+          </td>
+          <td class="py-3">{{ account.line }}</td>
+          <td class="py-3">{{ account.broker }}</td>
+          <td class="py-3">{{ account.renewalDate }}</td>
+          <td class="py-3 text-blue-400 font-semibold">
+            {{ account.premiumLabel }}
+          </td>
+          <td class="py-3">{{ account.ratedPremium }}</td>
+          <td class="py-3">
+            <span
+              [ngClass]="account.lossRatioColor"
+              class="px-2 py-1 rounded-full text-xs text-white"
+            >
+              {{ account.lossRatio }}%
+            </span>
+          </td>
+          <td class="py-3">
+            <span
+              [ngClass]="account.appetiteColor"
+              class="px-2 py-1 rounded-full text-xs text-white"
+            >
+              {{ account.appetite }}
+            </span>
+          </td>
+          <td class="py-3 flex items-center gap-2">
+            <span
+              [ngClass]="account.statusColor"
+              class="h-2 w-2 rounded-full inline-block"
+            ></span>
+            <span class="text-sm text-white">{{ account.status }}</span>
+          </td>
+          <td class="py-3">
+            <div
+              class="flex items-center gap-2 px-3 py-1 border border-blue-500 rounded-full w-fit text-white text-sm"
+            >
+              <span class="text-xs text-blue-400">{{
+                account.triage
+              }}</span>
+            </div>
+          </td>
+          <td class="py-3">
+            <div
+              class="flex items-center gap-2 px-3 py-1 border border-blue-500 rounded-full w-fit text-white text-sm"
+            >
+              <ng-container
+                *ngFor="let dot of getWinnabilityDots(account.winnability)"
+              >
+                <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+              </ng-container>
+              <span class="text-xs text-blue-400 ml-2">{{
+                account.winnabilityLabel
+              }}</span>
+            </div>
+          </td>
+          <td class="py-3 text-right">
+            <button class="text-gray-400 hover:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+.accounts-wrapper {
+  background: #101728;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+
+      .btn {
+        background: #1a1f2c;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+
+        &.primary {
+          background: #3b82f6;
+        }
+      }
+
+      input {
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: #1a1f2c;
+        color: white;
+        border: none;
+        width: 200px;
+      }
+    }
+  }
+
+  .accounts-table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0 10px;
+
+    th {
+      text-align: left;
+      font-weight: 500;
+      font-size: 12px;
+      color: #a0aec0;
+      padding-bottom: 6px;
+    }
+
+    td {
+      padding: 10px 0;
+      font-size: 14px;
+
+      .sub {
+        font-size: 12px;
+        color: #a0aec0;
+      }
+
+      .highlight {
+        color: #3b82f6;
+        font-weight: 600;
+      }
+
+      .badge {
+        padding: 2px 6px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .tag {
+        padding: 4px 8px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        &.appetite-high { background: #1e40af; }
+        &.appetite-medium { background: #3b82f6; }
+        &.appetite-cautious { background: #6b7280; }
+      }
+
+      .dot-status {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #60d394;
+        margin-right: 4px;
+
+        &.active { background: #10b981; }
+      }
+
+      .pill {
+        background: #1a1f2c;
+        padding: 2px 8px;
+        border-radius: 12px;
+      }
+
+      .winnability {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .dots span {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #1e3a8a;
+          opacity: 0.3;
+          margin-right: 2px;
+
+          &.filled {
+            opacity: 1;
+          }
+        }
+
+        .label {
+          font-size: 12px;
+          color: #3b82f6;
+        }
+      }
+
+      .menu-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #a0aec0;
+        cursor: pointer;
+      }
+    }
+  }
+}

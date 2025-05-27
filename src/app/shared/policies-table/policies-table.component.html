@@ -1,0 +1,55 @@
+<div class="policies-section" *ngIf="policiesData">
+  <h2 class="text-2xl font-semibold mb-4">Policies</h2>
+
+  <div class="overflow-auto rounded-lg shadow">
+    <table class="min-w-full text-sm text-left text-white">
+      <thead class="bg-gray-800 text-gray-400 uppercase text-xs">
+        <tr>
+          <th scope="col" class="px-6 py-3">Line</th>
+          <th scope="col" class="px-6 py-3">Eff. Date</th>
+          <th scope="col" class="px-6 py-3">Exp. Date</th>
+          <th scope="col" class="px-6 py-3">Status</th>
+          <th scope="col" class="px-6 py-3">Expiring Tech</th>
+          <th scope="col" class="px-6 py-3">Expiring Premium</th>
+          <th scope="col" class="px-6 py-3">Renewal to Tech</th>
+          <th scope="col" class="px-6 py-3">Renewal Tech</th>
+          <th scope="col" class="px-6 py-3">Renewal Premium</th>
+          <th scope="col" class="px-6 py-3">Rate Change</th>
+          <th scope="col" class="px-6 py-3">Loss Ratio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let policy of policiesData.rows"
+          class="border-b border-gray-700 hover:bg-gray-800"
+        >
+          <td class="px-6 py-4 font-medium">{{ policy.line }}</td>
+          <td class="px-6 py-4">{{ policy.effectiveDate || "---" }}</td>
+          <td class="px-6 py-4">{{ policy.expirationDate || "---" }}</td>
+          <td class="px-6 py-4">{{ policy.status }}</td>
+          <td class="px-6 py-4">
+            {{ policy.expiringTech | currency: "USD" }}
+          </td>
+          <td class="px-6 py-4">
+            {{ policy.expiringPremium | currency: "USD" }}
+          </td>
+          <td class="px-6 py-4">
+            {{ policy.renewalToTech | currency: "USD" }}
+          </td>
+          <td class="px-6 py-4">
+            {{ policy.renewalTech | currency: "USD" }}
+          </td>
+          <td class="px-6 py-4 font-semibold">
+            {{ policy.renewalPremium | currency: "USD" }}
+          </td>
+          <td class="px-6 py-4">
+            {{ policy.rateChange !== null ? policy.rateChange + "%" : "N/A" }}
+          </td>
+          <td class="px-6 py-4">
+            {{ policy.lossRatio ? policy.lossRatio + "%" : "N/A" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

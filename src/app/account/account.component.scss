@@ -1,0 +1,30 @@
+.account-container {
+  display: flex;
+  gap: 20px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+
+  .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .info {
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .active {
+      color: green;
+      font-weight: bold;
+    }
+  }
+}

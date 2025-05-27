@@ -1,0 +1,49 @@
+<div class="mt-10">
+  <h2 class="text-2xl font-semibold mb-4 text-white">Performance Metrics</h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="bg-slate-800 p-4 rounded shadow">
+      <div class="text-sm text-slate-400">Winnability</div>
+      <div class="text-xl font-bold">
+        {{ performanceMetrics.winnability.title }}
+      </div>
+      <div class="text-xs mt-1 text-slate-400">
+        Score: {{ performanceMetrics.winnability.value }}/5
+      </div>
+    </div>
+    <div class="bg-slate-800 p-4 rounded shadow">
+      <div class="text-sm text-slate-400">Loss Ratio</div>
+      <div class="text-xl font-bold">
+        {{ performanceMetrics.lossRatio.value }}%
+      </div>
+      <div class="text-xs mt-1 text-slate-400">
+        Target: {{ performanceMetrics.lossRatio.target }}%
+      </div>
+    </div>
+    <div class="bg-slate-800 p-4 rounded shadow">
+      <div class="text-sm text-slate-400">Premium Growth</div>
+      <div class="text-xl font-bold">
+        {{ performanceMetrics.premiumGrowth.value }}%
+      </div>
+      <div class="text-xs mt-1 text-slate-400">
+        {{ performanceMetrics.premiumGrowth.note }}
+      </div>
+    </div>
+    <div class="bg-slate-800 p-4 rounded shadow">
+      <h3 class="text-sm text-slate-400 mb-2">Exposure Distribution</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let exposure of performanceMetrics.exposureDistribution">
+          <div class="flex justify-between text-sm">
+            <span>{{ exposure.label }}</span>
+            <span>{{ exposure.value }}%</span>
+          </div>
+          <div class="w-full bg-slate-700 rounded h-1 mt-1">
+            <div
+              class="bg-blue-500 h-1 rounded"
+              [style.width.%]="exposure.value"
+            ></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

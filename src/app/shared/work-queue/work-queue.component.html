@@ -1,0 +1,78 @@
+<div class="work-queue bg-slate-800 rounded-xl p-4 text-sm text-white max-w-full">
+  <h2 class="text-xl font-semibold mb-4">Work Queue</h2>
+
+  <div class="flex space-x-2 mb-4">
+    <button
+      class="px-4 py-2 rounded-full text-sm font-medium"
+      [class.bg-blue-600]="activeTab === 'assigned'"
+      [class.bg-slate-700]="activeTab !== 'assigned'"
+      (click)="activeTab = 'assigned'"
+    >
+      Assigned to me ({{ workQueue.items.length }})
+    </button>
+    <button
+      class="px-4 py-2 rounded-full text-sm font-medium"
+      [class.bg-blue-600]="activeTab === 'review'"
+      [class.bg-slate-700]="activeTab !== 'review'"
+      (click)="activeTab = 'review'"
+    >
+      Pending Review
+    </button>
+    <button
+      class="px-4 py-2 rounded-full text-sm font-medium"
+      [class.bg-blue-600]="activeTab === 'referrals'"
+      [class.bg-slate-700]="activeTab !== 'referrals'"
+      (click)="activeTab = 'referrals'"
+    >
+      Referrals
+    </button>
+  </div>
+
+  <table class="w-full table-fixed">
+    <thead>
+    <tr class="text-slate-400 text-left border-b border-slate-600">
+      <th class="py-2">Originator</th>
+      <th class="py-2">Client/Line</th>
+      <th class="py-2">Type</th>
+      <th class="py-2">Status</th>
+      <th class="py-2">Created</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+      *ngFor="let item of workQueue.items"
+      class="border-b border-slate-700 hover:bg-slate-700/40"
+    >
+      <td class="py-3 flex items-center space-x-2">
+        <div
+          class="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center text-white font-semibold"
+        >
+          {{ item.originator.initials }}
+        </div>
+        <span *ngIf="!checkName(item.originator.name)">{{ item.originator.name }}</span>
+        <span *ngIf="checkName(item.originator.name)">Me</span>
+      </td>
+      <td class="py-3">
+        <div class="font-medium text-white">{{ item.client.name }}</div>
+        <div class="text-slate-400 text-xs">{{ item.client.line }}</div>
+      </td>
+      <td class="py-3">{{ item.type }}</td>
+      <td class="py-3">
+          <span
+            class="px-2 py-1 text-xs rounded-full"
+            [ngClass]="{
+              'bg-blue-600 text-white': item.status === 'New',
+              'bg-yellow-500 text-black': item.status === 'Pending Review',
+              'bg-green-500 text-white': item.status === 'Completed'
+            }"
+          >
+            {{ item.status }}
+          </span>
+      </td>
+      <td class="py-3 text-slate-300 text-sm">{{ item.created }}</td>
+      <td class="py-3 text-right text-2xl text-slate-400">⋮</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

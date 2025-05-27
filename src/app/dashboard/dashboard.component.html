@@ -1,0 +1,55 @@
+<div class="mt-10">
+  <div
+    class="text-white flex justify-between bg-slate-900 gap-6 h-full"
+    *ngIf="dashboardData"
+  >
+    <!-- Work Queue - full width -->
+    <div class="w-full">
+      <app-work-queue
+        *ngIf="dashboardData.workQueue"
+        [workQueue]="dashboardData.workQueue"
+        [account]="account"
+      ></app-work-queue>
+    </div>
+
+    <!-- Row with Portfolio Goals and Side Blocks -->
+    <div class="flex flex-col xl:flex-row gap-6 xl:w-3/5 4k:xl:w-1/5">
+      <!-- Portfolio Goals - 2/3 width -->
+      <div class="w-full">
+        <app-portfolio-goals
+          *ngIf="dashboardData.portfolioGoals"
+          [portfolioGoals]="dashboardData.portfolioGoals"
+        ></app-portfolio-goals>
+      </div>
+
+      <!-- Side Block: Quick Actions + Market Intelligence - 1/3 width -->
+      <div class="flex flex-col gap-6 w-full h-full">
+        <!-- Quick Actions -->
+        <div class="bg-slate-800 rounded-2xl p-4 text-white">
+          <h2 class="text-lg font-semibold mb-4">Quick actions</h2>
+          <div class="flex flex-col gap-3">
+            <button
+              *ngFor="let action of actions"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full text-sm transition"
+              (click)="handleClick(action.action)"
+            >
+              {{ action.label }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Market Intelligence -->
+        <app-market-intelligence
+          *ngIf="dashboardData.marketIntelligence"
+          [marketData]="dashboardData.marketIntelligence"
+        ></app-market-intelligence>
+      </div>
+    </div>
+  </div>
+  <div class="py-6">
+    <app-my-account
+      *ngIf="dashboardData.myAccounts"
+      [accountData]="dashboardData.myAccounts"
+    />
+  </div>
+</div>

@@ -1,0 +1,462 @@
+{
+  "accounts": {
+    "accounts": {
+      "id": "54",
+      "name": "Metty",
+      "surname": "Killian",
+      "fullName": "Metty Killian",
+      "email": "mettykillian@gmail.com"
+    },
+    "maritimeLogisticsCorp": {
+      "name": "Maritime Logistics Corp",
+      "type": "Shipping/Logistics",
+      "accountNumber": "54383",
+      "address": "425 Harbor Boulevard, Suite 300, Seattle, WA 98104",
+      "broker": "Marsh McLennan",
+      "underwriter": "Kate Johnson"
+    },
+    "performanceMetrics": {
+      "winnability": {
+        "title": "Very Strong",
+        "value": 5
+      },
+      "lossRatio": {
+        "value": 25,
+        "target": 42
+      },
+      "premiumGrowth": {
+        "value": 12.4,
+        "note": "YoY increase",
+        "current": "$123M",
+        "target": "$150M"
+      },
+      "exposureDistribution": [
+        { "label": "Marine Cargo", "value": 71.4 },
+        { "label": "General Liability", "value": 20 },
+        { "label": "Workers Comp", "value": 8.6 }
+      ]
+    },
+    "policies": {
+      "rows": [
+        {
+          "line": "Marine Cargo",
+          "policyNumber": "17030212",
+          "effectiveDate": "2026-06-30",
+          "expirationDate": "2027-06-30",
+          "status": "Active",
+          "expiringTech": 587500,
+          "expiringPremium": 605000,
+          "renewalToTech": 610000,
+          "renewalTech": 620000,
+          "renewalPremium": 625000,
+          "rateChange": 3.3,
+          "lossRatio": 22
+        },
+        {
+          "line": "General Liability",
+          "policyNumber": "4631092",
+          "effectiveDate": "2026-06-30",
+          "expirationDate": "2027-06-30",
+          "status": "Active",
+          "expiringTech": 160000,
+          "expiringPremium": 165000,
+          "renewalToTech": 170000,
+          "renewalTech": 172500,
+          "renewalPremium": 175000,
+          "rateChange": 6.1,
+          "lossRatio": 55
+        },
+        {
+          "line": "Workers Comp",
+          "policyNumber": "9182371",
+          "effectiveDate": "Pending",
+          "expirationDate": "Pending",
+          "status": "Pending",
+          "expiringTech": 0,
+          "expiringPremium": 0,
+          "renewalToTech": 73500,
+          "renewalTech": 75000,
+          "renewalPremium": 75000,
+          "rateChange": null,
+          "lossRatio": null
+        },
+        {
+          "line": "Umbrella",
+          "policyNumber": "5274936",
+          "effectiveDate": "2026-03-13",
+          "expirationDate": "2027-03-13",
+          "status": "Active",
+          "expiringTech": 245000,
+          "expiringPremium": 250000,
+          "renewalToTech": 267500,
+          "renewalTech": 270000,
+          "renewalPremium": 275000,
+          "rateChange": 10.0,
+          "lossRatio": 78
+        }
+      ],
+      "totals": {
+        "count": 4,
+        "expiringTech": 992500,
+        "expiringPremium": 1020000,
+        "renewalToTech": 1121000,
+        "renewalTech": 1137000,
+        "renewalPremium": 1150000,
+        "rateChangeAvg": 6.9,
+        "lossRatioAvg": 58.3
+      }
+    },
+    "accountStatus": {
+      "steps": [
+        { "label": "Submitted", "completed": true },
+        { "label": "Review", "completed": true },
+        { "label": "Quote", "completed": true },
+        { "label": "Bind", "completed": true },
+        { "label": "Issue", "completed": true },
+        { "label": "Renew", "completed": false }
+      ]
+    },
+    "complianceAndDocumentation": {
+      "docs": [
+        "KYC verification",
+        "Regulatory approval",
+        "Required Documentation",
+        "Financial Verification"
+      ]
+    },
+    "accountDetails": {
+      "desicionSupport": {
+        "winnabilityInsights": {
+          "overallScore": 82,
+          "label": "Very Strong",
+          "trend": [76, 78, 81, 79, 82],
+          "position": {
+            "self": 82,
+            "marketAverage": 68,
+            "topCompetitor": 88
+          },
+          "increasingFactors": [
+            { "name": "Brokers relationship", "impact": 28 },
+            { "name": "Loss history", "impact": 22 },
+            { "name": "Industry growth", "impact": 16 },
+            { "name": "Multiline opportunity", "impact": 11 }
+          ],
+          "decreasingFactors": [
+            { "name": "Premium pricing", "impact": -24 },
+            { "name": "Total exposure", "impact": -18 },
+            { "name": "Loss ratio trend", "impact": -13 },
+            { "name": "Market competition", "impact": -5 }
+          ],
+          "recommendations": [
+            {
+              "title": "Offer 5% premium discount in exchange for 3-year commitment",
+              "description": "Historical win rate increases 24% with multi-year commitments. Current pricing is 12% above market average. This approach would strengthen retention while maintaining adequate profitability.",
+              "action": "Apply"
+            },
+            {
+              "title": "Propose risk control services for cargo handling procedures",
+              "description": "Can potentially reduce loss ratio by 15–20% based on similar maritime accounts in your portfolio. Specific focus on loading/unloading operations would address the most frequent claim scenarios.",
+              "action": "Apply"
+            }
+          ]
+        },
+        "exposureReview": {
+          "title": "exposureReview title"
+        },
+        "portfolioStrategyAlignment": {
+          "title": "portfolioStrategyAlignment title"
+        },
+        "BrokerAnalytics": {
+          "title": "BrokerAnalytics title"
+        }
+      },
+      "riscAssessment": {
+        "risc1": {
+          "title": "riscAssessment risc1 title"
+        },
+        "risc2": {
+          "title": "riscAssessment risc2  title"
+        },
+        "risc3": {
+          "title": "riscAssessment risc3  title"
+        },
+        "risc4": {
+          "title": "riscAssessment risc4  title"
+        },
+        "risc5": {
+          "title": "riscAssessment risc5  title"
+        },
+        "risc6": {
+          "title": "riscAssessment risc6  title"
+        }
+      },
+      "documentsAndCompliance": {
+        "document": {
+          "title": "documentsAndCompliance document  title"
+        },
+        "compliance": {
+          "title": "documentsAndCompliance compliance  title"
+        }
+      }
+    },
+    "communication": [
+      {
+        "status": "NEW",
+        "title": "Policy Renewal - Auto Insurance 5/15/25",
+        "author": "Michael Roberts",
+        "date": "Apr 5",
+        "message": "Hello Arthur, I’m reaching out regarding the upcoming auto policy renewal for Real Estate Group, LLC. The current policy expires on 6/30/2024. Would you like to review coverage options before proceeding with the renewal? I’ve attached the current policy details and premium breakdown for your reference.",
+        "attachments": 3,
+        "replied": false
+      },
+      {
+        "status": "NEW",
+        "title": "New Quote Request - Workers Comp Insurance",
+        "author": "Sarah Chen",
+        "date": "Apr 5",
+        "message": "Hi Arthur, Real Estate Group has expressed interest in adding workers compensation coverage to their insurance portfolio. I’ve completed the initial risk assessment based",
+        "attachments": 3,
+        "replied": false
+      },
+      {
+        "status": "Responded",
+        "title": "Fwd: New Submission - BPM Real Estate - EFF 4/1/24",
+        "author": "Joshua Dunmire",
+        "date": "Mar 25",
+        "message": "Arthur, attached please find our submission for the above mentioned applicant. We have...",
+        "attachments": 0,
+        "replied": true
+      },
+      {
+        "status": "None",
+        "title": "New Business: BPM Real Estate Group, LLC",
+        "author": "Isabel Kreller",
+        "date": "Feb 28",
+        "message": "Hello Arthur, I am pleased to present you with a submission on this client’s upcoming...",
+        "attachments": 5,
+        "replied": false
+      }
+    ]
+  },
+  "dashboard": {
+    "workQueue": {
+      "tabs": [
+        { "label": "Assigned to me", "count": 12 },
+        { "label": "Pending Review", "count": 8 },
+        { "label": "Referrals", "count": 3 }
+      ],
+      "items": [
+        {
+          "originator": {
+            "initials": "SM",
+            "name": "Sam Masters"
+          },
+          "client": {
+            "name": "NAMEX Tech Solutions",
+            "line": "Cyber Liability"
+          },
+          "type": "Underwriter Referral",
+          "status": "New",
+          "created": "2025-04-16"
+        },
+        {
+          "originator": {
+            "initials": "AW",
+            "name": "Annalise Willis"
+          },
+          "client": {
+            "name": "Maritime Logistics Corp",
+            "line": "Marine Cargo"
+          },
+          "type": "Underwriter Referral",
+          "status": "New",
+          "created": "2025-04-20"
+        },
+        {
+          "originator": {
+            "initials": "PD",
+            "name": "Patrick Devenport"
+          },
+          "client": {
+            "name": "GreenField Energy Ltd",
+            "line": "Environmental"
+          },
+          "type": "Loss Control Request",
+          "status": "New",
+          "created": "2025-04-16"
+        },
+        {
+          "originator": {
+            "initials": "AK",
+            "name": "Ana Killian"
+          },
+          "client": {
+            "name": "NorthStar Financial Group",
+            "line": "D&O Liability"
+          },
+          "type": "Underwriter Referral",
+          "status": "Pending Review",
+          "created": "2025-04-22"
+        },
+        {
+          "originator": {
+            "initials": "AK",
+            "name": "Ana Killian"
+          },
+          "client": {
+            "name": "Alliance Healthcare Systems",
+            "line": "Medical Malpractice"
+          },
+          "type": "Email",
+          "status": "Completed",
+          "created": "2025-04-28"
+        },
+        {
+          "originator": {
+            "initials": "MK",
+            "name": "Metty Killian"
+          },
+          "client": {
+            "name": "QuantumTech Industries",
+            "line": "Product Liability"
+          },
+          "type": "Email",
+          "status": "Completed",
+          "created": "2025-04-20"
+        }
+      ]
+    },
+    "portfolioGoals": {
+      "lossRatio": {
+        "title": "Portfolio Loss Ratio Target",
+        "target": 55,
+        "value": 48.2,
+        "statusText": "-6.8% (GOOD)",
+        "statusColor": "text-green-500"
+      },
+      "renewalRetention": {
+        "title": "Renewal Retention",
+        "targetRange": "85-90%",
+        "value": 88,
+        "statusText": "ON TARGET",
+        "statusColor": "text-green-500"
+      },
+      "newBusiness": {
+        "title": "New Business Target",
+        "value": 8.1,
+        "target": 12,
+        "currency": "M",
+        "percent": 67
+      },
+      "annualGWP": {
+        "title": "Annual GWP Target",
+        "value": 28.4,
+        "target": 42,
+        "currency": "M",
+        "percent": 68
+      }
+    },
+    "marketIntelligence": [
+      {
+        "title": "Rate hardening in Cyber market - +15% YoY",
+        "color": "bg-red-500"
+      },
+      {
+        "title": "New capacity entering Marine market",
+        "color": "bg-yellow-400"
+      },
+      {
+        "title": "Environmental regulatory changes in CA",
+        "color": "bg-blue-600"
+      }
+    ],
+    "myAccounts": [
+      {
+        "name": "NAMEX Tech Solutions",
+        "type": "Large Enterprise",
+        "line": "D&O Liability",
+        "broker": "Willis Towers",
+        "renewalDate": "2025-04-16",
+        "premium": 2.3,
+        "premiumLabel": "$2.3M",
+        "ratedPremium": "$2.8M",
+        "lossRatio": 32,
+        "lossRatioColor": "bg-green-500",
+        "appetite": "HIGH",
+        "appetiteColor": "bg-blue-700",
+        "status": "Active",
+        "statusColor": "bg-green-500",
+        "triage": 180,
+        "winnability": 5,
+        "winnabilityLabel": "Very Strong"
+      },
+      {
+        "name": "Alliance Healthcare Systems",
+        "type": "Mid-Market",
+        "line": "Medical Malpractice",
+        "broker": "Aon Risk",
+        "renewalDate": "2025-06-30",
+        "premium": 1.7,
+        "premiumLabel": "$1.7M",
+        "ratedPremium": "$1.9M",
+        "lossRatio": 38,
+        "lossRatioColor": "bg-yellow-400",
+        "appetite": "MEDIUM",
+        "appetiteColor": "bg-blue-600",
+        "status": "Under review",
+        "statusColor": "bg-blue-400",
+        "triage": 165,
+        "winnability": 4,
+        "winnabilityLabel": "Strong"
+      },
+      {
+        "name": "Maritime Logistics Corp",
+        "type": "Shipping/Logistics",
+        "line": "Marine Cargo",
+        "broker": "Marsh McLennan",
+        "renewalDate": "2025-09-05",
+        "premium": 0.875,
+        "premiumLabel": "$875K",
+        "ratedPremium": "$920K",
+        "lossRatio": 25,
+        "lossRatioColor": "bg-green-500",
+        "appetite": "HIGH",
+        "appetiteColor": "bg-blue-700",
+        "status": "Active",
+        "statusColor": "bg-green-500",
+        "triage": 182,
+        "winnability": 5,
+        "winnabilityLabel": "Very Strong"
+      },
+      {
+        "name": "GreenField Energy Ltd",
+        "type": "Energy Sector",
+        "line": "Environmental Liability",
+        "broker": "Aon Risk",
+        "renewalDate": "2025-07-22",
+        "premium": 1.2,
+        "premiumLabel": "$1.2M",
+        "ratedPremium": "$1.4M",
+        "lossRatio": 67,
+        "lossRatioColor": "bg-red-500",
+        "appetite": "CAUTIOUS",
+        "appetiteColor": "bg-yellow-500",
+        "status": "Under review",
+        "statusColor": "bg-blue-400",
+        "triage": 158,
+        "winnability": 3,
+        "winnabilityLabel": "Medium"
+      }
+    ]
+  },
+  "menu": {
+    "accounts": {
+      "id": "54",
+      "name": "Metty",
+      "surname": "Killian",
+      "fullName": "Metty Killian",
+      "email": "mettykillian@gmail.com"
+    },
+    "tasks": 12
+  }
+}
