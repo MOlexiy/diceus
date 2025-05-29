@@ -2,9 +2,9 @@
   <!-- Header Info -->
   <div
     *ngIf="accountData.maritimeLogisticsCorp"
-    class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+    class="flex-col md:flex-row md:items-center md:justify-between gap-4 sm:md:lg:block xl:flex"
   >
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4  sm:pb-4 md:pb-4 lg:pb-4 xl:pb-0">
       <h1 class="text-2xl font-bold">
         {{ accountData.maritimeLogisticsCorp.name }}
       </h1>
@@ -86,7 +86,7 @@
 
   <!-- Account Status & Compliance & Documentation-->
   <div
-    class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-white"
+    class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 text-white"
     *ngIf="accountData.accountStatus"
   >
     <!-- Account Status -->

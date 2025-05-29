@@ -41,4 +41,8 @@ export class CommunicationSectionComponent implements OnInit {
     this.filteredMessages = this.communication;
     this.isSearching = false;
   }
+
+  click(): void {
+    console.log('clicked');
+  }
 }

@@ -1,10 +1,10 @@
 <div class="mt-10">
   <div
-    class="text-white flex justify-between bg-slate-900 gap-6 h-full"
+    class="text-white justify-between bg-slate-900 gap-6 h-full sm:block md:block lg:block xl:flex"
     *ngIf="dashboardData"
   >
     <!-- Work Queue - full width -->
-    <div class="w-full">
+    <div class="w-full sm:pb-4 md:pb-4 lg:pb-4 xl:pb-0">
       <app-work-queue
         *ngIf="dashboardData.workQueue"
         [workQueue]="dashboardData.workQueue"
